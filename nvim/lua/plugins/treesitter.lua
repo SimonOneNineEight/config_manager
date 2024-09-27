@@ -21,6 +21,7 @@ return { -- Highlight, edit, and navigate code
 				"markdown_inline",
 				"query",
 				"vim",
+				"vimdoc",
 				"json",
 				"javascript",
 				"typescript",
@@ -42,7 +43,7 @@ return { -- Highlight, edit, and navigate code
 			},
 			indent = { enable = true, disable = { "ruby" } },
 			autotag = { enable = true },
-			incremental_selection = {
+			--[[ incremental_selection = {
 				enable = true,
 				keymaps = {
 					init_selection = "<M-space>",
@@ -50,7 +51,7 @@ return { -- Highlight, edit, and navigate code
 					scope_increment = false,
 					node_decrement = "<bs>",
 				},
-			},
+			}, ]]
 		})
 	end,
 	-- There are additional nvim-treesitter modules that you can use to interact

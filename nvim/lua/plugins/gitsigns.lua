@@ -31,14 +31,14 @@ return {
 			map("n", "<leader>hp", gs.preview_hunk, "[P]review hunk")
 
 			map("n", "<leader>hb", function()
-				gitsigns.blame_line({ full = true })
+				gs.blame_line({ full = true })
 			end)
-			map("n", "<leader>hB", gitsigns.toggle_current_line_blame)
-			map("n", "<leader>hd", gitsigns.diffthis)
+			map("n", "<leader>hB", gs.toggle_current_line_blame)
+			map("n", "<leader>hd", gs.diffthis)
 			map("n", "<leader>hD", function()
-				gitsigns.diffthis("~")
+				gs.diffthis("~")
 			end)
-			map("n", "<leader>td", gitsigns.toggle_deleted)
+			map("n", "<leader>td", gs.toggle_deleted)
 
 			-- Text object
 			map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>")

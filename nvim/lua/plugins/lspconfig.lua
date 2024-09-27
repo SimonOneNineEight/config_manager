@@ -13,6 +13,9 @@ local servers = {
 			},
 		},
 	},
+	clangd = {
+		args = { "-Iinclude" },
+	},
 }
 
 return {
@@ -54,7 +57,6 @@ return {
 		require("mason-lspconfig").setup({
 			ensure_installed = {
 				"lua_ls",
-				"tsserver",
 				"clangd",
 			},
 			handlers = {
