@@ -16,6 +16,9 @@ local servers = {
 	clangd = {
 		args = { "-Iinclude" },
 	},
+	pyright = {
+		filetypes = { "python" },
+	},
 }
 
 return {
@@ -58,6 +61,7 @@ return {
 			ensure_installed = {
 				"lua_ls",
 				"clangd",
+				"pyright",
 			},
 			handlers = {
 				function(server_name) -- default handler (optional)

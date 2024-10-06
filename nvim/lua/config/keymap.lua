@@ -31,7 +31,13 @@ keymap.set("n", "n", "nzzzv")
 keymap.set("n", "N", "Nzzzv")
 
 -- Paste while keep the copyed text in the buffer
-keymap.set("x", "<leader>p", '[["_dP]]')
+-- keymap.set("x", "<leader>p", '[["_dP]]')
+
+-- Delete wihout cutting
+keymap.set("x", "<leader>d", '"_d')
+
+-- Set x to _x to delete character without affecting the clipboard
+keymap.set("n", "x", '"_x')
 
 -- Select all
 keymap.set("n", "<C-a>", "ggVG")
