@@ -19,6 +19,40 @@ local servers = {
 	pyright = {
 		filetypes = { "python" },
 	},
+	tailwindcss = {
+		filetypes = {
+			"templ",
+			"astro",
+			"javascript",
+			"typescript",
+			"react",
+		},
+		settings = {
+			tailwindCSS = {
+				includeLanguages = {
+					templ = "html",
+				},
+			},
+		},
+	},
+	tsserver = {},
+	cssls = {
+		filetypes = { "css", "scss", "less", "sass" },
+		settings = {
+			css = { validate = true, lint = {
+				unknownAtRules = "ignore",
+			} },
+			scss = { validate = true, lint = {
+				unknownAtRules = "ignore",
+			} },
+			less = { validate = true, lint = {
+				unknownAtRules = "ignore",
+			} },
+		},
+	},
+	html = {
+		filetypes = { "html" },
+	},
 }
 
 return {
@@ -62,6 +96,9 @@ return {
 				"lua_ls",
 				"clangd",
 				"pyright",
+				"tailwindcss",
+				"ts_ls",
+				"cssls",
 			},
 			handlers = {
 				function(server_name) -- default handler (optional)

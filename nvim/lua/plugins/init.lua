@@ -3,7 +3,7 @@ return {
 		"folke/tokyonight.nvim",
 		lazy = false,
 		priority = 1000,
-		opts = { style = "night" },
+		opts = {},
 		config = function()
 			vim.cmd([[colorscheme tokyonight]])
 		end,
@@ -18,4 +18,15 @@ return {
 		opts = { signs = false },
 	},
 	{ "stevearc/dressing.nvim", event = "VeryLazy" },
+	{
+		"xiyaowong/transparent.nvim",
+		config = function()
+			require("transparent").setup({
+				extra_group = {
+					"NormalFloat",
+					"NvimTreeNormal",
+				},
+			})
+		end,
+	},
 }

@@ -31,6 +31,7 @@ return { -- Highlight, edit, and navigate code
 				"vimdoc",
 				"jsdoc",
 				"gitignore",
+				"sql",
 			},
 			-- Autoinstall languages that are not installed
 			auto_install = true,
@@ -43,6 +44,7 @@ return { -- Highlight, edit, and navigate code
 			},
 			indent = { enable = true, disable = { "ruby" } },
 			autotag = { enable = true },
+
 			--[[ incremental_selection = {
 				enable = true,
 				keymaps = {
@@ -53,6 +55,15 @@ return { -- Highlight, edit, and navigate code
 				},
 			}, ]]
 		})
+
+		-- MDX
+		vim.filetype.add({
+			extension = {
+				mdx = "mdx",
+			},
+		})
+
+		vim.treesitter.language.register("markdown", "mdx")
 	end,
 	-- There are additional nvim-treesitter modules that you can use to interact
 	-- with nvim-treesitter. You should go explore a few and see what interests you:
