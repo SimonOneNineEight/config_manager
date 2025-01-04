@@ -2,9 +2,6 @@ return { -- Highlight, edit, and navigate code
 	"nvim-treesitter/nvim-treesitter",
 	event = { "BufReadPre", "BufNewFile" },
 	build = ":TSUpdate",
-	dependencies = {
-		"windwp/nvim-ts-autotag",
-	},
 	-- [[ Configure Treesitter ]] See `:help nvim-treesitter`
 	config = function()
 		local treesitter = require("nvim-treesitter.configs")
@@ -21,7 +18,6 @@ return { -- Highlight, edit, and navigate code
 				"markdown_inline",
 				"query",
 				"vim",
-				"vimdoc",
 				"json",
 				"javascript",
 				"typescript",
@@ -43,7 +39,6 @@ return { -- Highlight, edit, and navigate code
 				additional_vim_regex_highlighting = { "ruby" },
 			},
 			indent = { enable = true, disable = { "ruby" } },
-			autotag = { enable = true },
 
 			--[[ incremental_selection = {
 				enable = true,
@@ -59,7 +54,7 @@ return { -- Highlight, edit, and navigate code
 		-- MDX
 		vim.filetype.add({
 			extension = {
-				mdx = "mdx",
+				mdx = "markdown",
 			},
 		})
 

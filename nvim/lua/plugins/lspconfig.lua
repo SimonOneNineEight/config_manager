@@ -53,6 +53,9 @@ local servers = {
 	html = {
 		filetypes = { "html" },
 	},
+	marksman = {
+		filetypes = { "markdown", "mdx" },
+	},
 }
 
 return {
@@ -99,6 +102,7 @@ return {
 				"tailwindcss",
 				"ts_ls",
 				"cssls",
+				"marksman",
 			},
 			handlers = {
 				function(server_name) -- default handler (optional)

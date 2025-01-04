@@ -14,6 +14,15 @@ config.window_background_opacity = 0.8
 
 config.color_scheme = "Snazzy"
 
+-- Adjust window padding
+
+config.window_padding = {
+	left = 0,
+	right = 0,
+	top = 0,
+	bottom = 0,
+}
+
 -- Cursor Movement
 config.keys = {
 	-- Rebind OPT-Left, OPT-Right as ALT-b, ALT-f respectively to match Terminal.app behavior
